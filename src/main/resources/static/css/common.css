@@ -3026,4 +3026,14 @@ footer li:not(:last-of-type) {
   }
 }
 
+.ticketing {
+  margin: auto;
+  margin-top: 100px;
+  height: 200px;
+  width: 1100px;
+  border: 1px solid #D0FC5C;
+  border-radius: 40px;
+  background-color: #D0FC5C;
+}
+
 /*# sourceMappingURL=common.css.map */
