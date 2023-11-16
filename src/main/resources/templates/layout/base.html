@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org"
+      xmlns:layout="http://www.ultraq.net.nz/thymeleaf/layout"
+      th:fragment="layout (pageCss, pageScript, content)">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+
+    <link rel="stylesheet" th:href="@{/lib/summernote/summernote-lite.css}">
+    <link rel="stylesheet" th:href="@{/css/reset.css}">
+    <link rel="stylesheet" th:href="@{/css/common.css}">
+
+    <!-- Page Css -->
+    <!--<th:block th:replace="${pageCss}"></th:block>-->
+</head>
+<body>
+    <div>
+        <header th:replace="layout/header :: header"></header>
+        <main th:insert="${content}" class="container"></main>
+        <footer th:replace="layout/footer :: footer"></footer>
+    </div>
+</body>
+</html>
