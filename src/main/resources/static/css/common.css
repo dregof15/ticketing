@@ -535,6 +535,7 @@ footer li:not(:last-of-type) {
   padding-left: 10px;
   padding-right: 10px;
   background-color: #f2f6f9;
+  cursor: pointer;
 }
 
 .ticketing-select-btn-input {
@@ -542,6 +543,7 @@ footer li:not(:last-of-type) {
   width: 160px;
   border: none;
   outline: none;
+  cursor: pointer;
 }
 
 .location-img {
@@ -575,6 +577,7 @@ footer li:not(:last-of-type) {
   border-radius: 10px;
   background-color: #A5CD48;
   color: white;
+  cursor: pointer;
 }
 
 .small-text {
