@@ -21,7 +21,7 @@
                                     <ul class="select-btn-list">
                                         <li>
                                             <a class="select-btn on">
-                                                <input class="btn-not-visible" id="tripTypeRT" name="tripType" type="radio">
+                                                <input class="btn-not-visible" id="tripTypeRT" name="tripType" type="radio" text="출발지">
                                                 <label class="select-btn-label" for="tripTypeRT">왕복</label>
                                             </a>
                                         </li>
@@ -35,19 +35,21 @@
                                 </div>
                                 <div class="ticketing-bottom-inner-bottom">
                                     <div class="ticketing-select-btn">
-                                        <input class="ticketing-select-btn-input" readonly>
+                                        <input class="ticketing-select-btn-input" readonly value="출발지">
                                         <a class="location-img"></a>
                                     </div>
                                     <div class="ticketing-select-btn">
-                                        <input class="ticketing-select-btn-input" readonly>
+                                        <input class="ticketing-select-btn-input" readonly value="도착지">
                                         <a class="location-img"></a>
                                     </div>
-                                    <div class="ticketing-select-btn">
-                                        <input class="ticketing-select-btn-input" readonly>
+                                    <div class="ticketing-select-btn-calender">
+                                        <input class="ticketing-select-btn-calender-input" readonly value="YYYY-MM-DD">
+                                        <span class="calender-span">~</span>
+                                        <input class="ticketing-select-btn-calender-input" readonly value="YYYY-MM-DD">
                                         <a class="calender-img"></a>
                                     </div>
                                     <div class="ticketing-select-btn">
-                                        <input class="ticketing-select-btn-input" readonly>
+                                        <input class="ticketing-select-btn-input" readonly value="인원수">
                                         <a class="man-img"></a>
                                     </div>
                                     <button class="submit-btn">조회</button>

@@ -530,7 +530,7 @@ footer li:not(:last-of-type) {
 .ticketing-select-btn {
   display: flex;
   height: 60px;
-  width: 220px;
+  width: 200px;
   margin-right: 20px;
   padding-left: 10px;
   padding-right: 10px;
@@ -544,6 +544,33 @@ footer li:not(:last-of-type) {
   border: none;
   outline: none;
   cursor: pointer;
+  color: gray;
+}
+
+.ticketing-select-btn-calender {
+  display: flex;
+  height: 60px;
+  width: 280px;
+  margin-right: 20px;
+  padding-left: 10px;
+  padding-right: 10px;
+  background-color: #f2f6f9;
+  cursor: pointer;
+}
+
+.ticketing-select-btn-calender-input {
+  height: 60px;
+  width: 100px;
+  border: none;
+  outline: none;
+  cursor: pointer;
+  font-size: 14px;
+  color: gray;
+}
+
+.calender-span {
+  margin: auto;
+  height: 20px;
 }
 
 .location-img {
