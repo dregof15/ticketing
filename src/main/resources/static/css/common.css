@@ -626,7 +626,7 @@ footer li:not(:last-of-type) {
 }
 
 .main-bak {
-  /*background: url("/images/common/plane2.jpg") right 50% no-repeat;*/
-  background-color: black;
+  background: url("/images/common/plane2.jpg") right 50% no-repeat;
+  /*background-color: black;*/
 }
 /*# sourceMappingURL=common.css.map */
