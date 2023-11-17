@@ -541,14 +541,40 @@ footer li:not(:last-of-type) {
   height: 60px;
   width: 160px;
   border: none;
+  outline: none;
 }
 
 .location-img {
-  width: 20px;
-  height: 30px;
+  width: 18px;
+  height: 27px;
   margin: auto;
   background-image: url("/images/common/locator.png");
   background-size: cover;
+}
+
+.calender-img {
+  width: 33px;
+  height: 33px;
+  margin: auto;
+  background-image: url("/images/common/calendar.png");
+  background-size: cover;
+}
+
+.man-img {
+  width: 20px;
+  height: 30px;
+  margin: auto;
+  background-image: url("/images/common/man.png");
+  background-size: cover;
+}
+
+.submit-btn {
+  height: 60px;
+  width: 90px;
+  border: none;
+  border-radius: 10px;
+  background-color: #A5CD48;
+  color: white;
 }
 
 .small-text {
@@ -583,7 +609,7 @@ footer li:not(:last-of-type) {
 }
 
 .on {
-  background-color: #d22c26;
+  background-color: #A5CD48;
   color: white;
 }
 
