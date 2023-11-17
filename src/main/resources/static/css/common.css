@@ -3031,9 +3031,12 @@ footer li:not(:last-of-type) {
   margin-top: 100px;
   height: 200px;
   width: 1100px;
-  border: 1px solid #D0FC5C;
+  border: 1px solid #A5CD48;
   border-radius: 40px;
-  background-color: #D0FC5C;
+  background-color: #A5CD48;
 }
 
+.mainbak {
+  background: url("/images/common/plane2.jpg") right 50% no-repeat;
+}
 /*# sourceMappingURL=common.css.map */
