@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html th:replace="~{layout/base :: layout(~{::#css}, ~{::#script}, ~{::section})}"
+      xmlns:th="http://www.thymeleaf.org">
+<head>
+  <meta charset="UTF-8">
+
+  <th:block id="css"></th:block>
+
+  <th:block id="script">
+<!--    <script type="text/javascript" th:src="@{/js/user/join/member.js}"></script>-->
+  </th:block>
+</head>
+<body>
+
+<section>
+<!--  <div class="inner register-wrap" th:object="${data}">-->
+  <div class="inner register-wrap">
+    <div class="page-top">
+      <ul class="breadcrumbs">
+        <li><img src="/images/common/olive-big.png"></li>
+      </ul>
+      <h2 class="page-tit tit-decoration">회원가입</h2>
+    </div>
+    <div class="cont-area">
+      <ul class="join-process">
+        <li class="past">
+          <div class="num">01</div>
+          <p>유형선택</p>
+        </li>
+        <li class="past">
+          <div class="num">02</div>
+          <p>약관동의</p>
+        </li>
+        <li class="on">
+          <div class="num">03</div>
+          <p>정보입력</p>
+        </li>
+        <li>
+          <div class="num">04</div>
+          <p>가입완료</p>
+        </li>
+      </ul>
+      <div class="register-form">
+        <form id="form1">
+          <div class="form-tit">
+            <h3>기본정보 입력</h3>
+            <p class="essential-txt">표시는 필수 입력 사항입니다.</p>
+          </div>
+          <div class="form-list">
+            <div class="form-item">
+              <p class="label essential"><span>아이디</span></p>
+              <div class="id">
+<!--                <input type="text" th:field="*{mberId}" placeholder="아이디를 입력해 주세요" formatter='userId' maxlength="15">-->
+                <input type="text" placeholder="아이디를 입력해 주세요" formatter='userId' maxlength="15">
+                <a class="btn lightgreen" href="javascript:void(0);" id="idCheck">중복확인</a>
+              </div>
+            </div>
+            <div class="form-item">
+              <p class="label essential"><span>비밀번호</span></p>
+              <div>
+<!--                <input type="password" th:field="*{password}" placeholder="영문+숫자+특수문자(!@#$) 각 1자 이상 포함하여 9~12자 이내" maxlength="20">-->
+                <input type="password" placeholder="영문+숫자+특수문자(!@#$) 각 1자 이상 포함하여 9~12자 이내" maxlength="20">
+              </div>
+            </div>
+            <div class="form-item">
+              <p class="label essential"><span>비밀번호 확인</span></p>
+              <div>
+                <input type="password" id="passwordCheck" placeholder="영문+숫자+특수문자(!@#$) 각 1자 이상 포함하여 9~12자 이내" maxlength="20">
+              </div>
+            </div>
+            <div class="form-item">
+              <p class="label essential"><span>가입자명</span></p>
+              <div>
+<!--                <input type="text" th:field="*{mberNm}" placeholder="가입자명을 입력해 주세요" maxlength="10" formatter="replaceKo">-->
+                <input type="text" placeholder="가입자명을 입력해 주세요" maxlength="10" formatter="replaceKo">
+              </div>
+            </div>
+            <div class="form-item">
+              <p class="label essential">휴대폰</p>
+              <div>
+<!--                <input type="text" th:field="*{mbtlnum}" placeholder="전화번호" formatter="phoneNum">-->
+                <input type="text" placeholder="전화번호" formatter="phoneNum">
+                <!--<a class="btn sky" href="javascript:void(0);">본인인증</a>-->
+              </div>
+            </div>
+            <div class="form-item">
+              <p class="label">이메일</p>
+              <div class="email">
+                <input type="text" id="idEmail" name="idEmail" maxlength="15" formatter="email">
+                @
+                <input type="text" id="domainEmail" name="domainEmail" readonly maxlength="15" formatter="email">
+                <select id="domainSelect" name="domainSelect">
+                  <option value="">선택</option>
+                </select>
+              </div>
+            </div>
+            <div class="form-item">
+              <p class="label essential"><span>주소</span></p>
+              <div class="address">
+                <div>
+<!--                  <input type="text" th:field="*{zip}" placeholder="주소 선택" readonly>-->
+                  <input type="text" placeholder="주소 선택" readonly>
+                  <a class="btn lightgreen" href="javascript:void(0);" onclick="$api.addressApi()">주소찾기</a>
+                </div>
+                <div>
+<!--                  <input type="text" th:field="*{adres}" placeholder="도로명 + 지번" readonly>-->
+                  <input type="text" placeholder="도로명 + 지번" readonly>
+<!--                  <input type="text" th:field="*{adresDetail}" placeholder="상세주소를 입력해 주세요" maxlength="30">-->
+                  <input type="text" placeholder="상세주소를 입력해 주세요" maxlength="30">
+                </div>
+              </div>
+            </div>
+            <div class="form-item">
+              <p class="label"><span>시도/시군구</span></p>
+              <div>
+<!--                <input type="text" th:field="*{ctprvn}" placeholder="도/시" readonly>-->
+                <input type="text" placeholder="도/시" readonly>
+<!--                <input type="text" th:field="*{signgu}" placeholder="시/군/구" readonly>-->
+                <input type="text" placeholder="시/군/구" readonly>
+              </div>
+            </div>
+          </div>
+        </form>
+      </div>
+      <div class="btn-area">
+        <a class="btn gray" href="/join/member/1">이전</a>
+        <a class="btn green" onclick="pageObj.save2()">다음</a>
+      </div>
+    </div>
+  </div>
+</section>
+
+</body>
+</html>

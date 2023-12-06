@@ -22,15 +22,15 @@ public class SecurityConfig {
 
                 // 특정 URL에 대한 권한 설정.
                 .authorizeHttpRequests((authorizeRequests) -> {
-                    authorizeRequests.requestMatchers("/user/**").authenticated();
-
-                    authorizeRequests.requestMatchers("/manager/**")
-                            // ROLE_은 붙이면 안 된다. hasAnyRole()을 사용할 때 자동으로 ROLE_이 붙기 때문이다.
-                            .hasAnyRole("ADMIN", "MANAGER");
-
-                    authorizeRequests.requestMatchers("/admin/**")
-                            // ROLE_은 붙이면 안 된다. hasRole()을 사용할 때 자동으로 ROLE_이 붙기 때문이다.
-                            .hasRole("ADMIN");
+//                    authorizeRequests.requestMatchers("/user/**").authenticated();
+//
+//                    authorizeRequests.requestMatchers("/manager/**")
+//                            // ROLE_은 붙이면 안 된다. hasAnyRole()을 사용할 때 자동으로 ROLE_이 붙기 때문이다.
+//                            .hasAnyRole("ADMIN", "MANAGER");
+//
+//                    authorizeRequests.requestMatchers("/admin/**")
+//                            // ROLE_은 붙이면 안 된다. hasRole()을 사용할 때 자동으로 ROLE_이 붙기 때문이다.
+//                            .hasRole("ADMIN");
 
                     authorizeRequests.anyRequest().permitAll();
                 })
