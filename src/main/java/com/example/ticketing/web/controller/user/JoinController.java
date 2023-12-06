@@ -13,7 +13,6 @@ public class JoinController {
 
     @GetMapping("/member")
     public String memberjoin () {
-
-        return "join/member/memberJoin";
+        return "user/join/memberJoin";
     }
 }
