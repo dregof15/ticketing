@@ -914,3 +914,11 @@ input, select {
   border-radius: 5px;
   border: 1px solid #E5E5E5;
 }
+
+.center-parent {
+  display: flex;
+}
+
+.center-child {
+  margin: auto;
+}
