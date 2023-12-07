@@ -29,7 +29,7 @@ public class User extends BaseEntity {
     @Column(name = "vip_dp", length = 50)
     private String vipDp;
 
-    @OneToMany(mappedBy = "client", fetch = FetchType.LAZY, cascade = CascadeType.ALL, orphanRemoval = true)
-    private List<TransactionLog> transactionLogList = new ArrayList<>();
+    @OneToOne(mappedBy = "client", fetch = FetchType.LAZY, cascade = CascadeType.ALL, orphanRemoval = true)
+    private TransactionLog transactionLog;
 
 }

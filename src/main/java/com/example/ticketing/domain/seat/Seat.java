@@ -24,7 +24,7 @@ public class Seat extends BaseEntity {
     @Column(name = "rating",nullable = false)
     private int rating;
 
-    @OneToMany(mappedBy = "seat", fetch = FetchType.LAZY, cascade = CascadeType.ALL, orphanRemoval = true)
-    private List<TransactionLog> seatList = new ArrayList<>();
+    @OneToOne(mappedBy = "seat", fetch = FetchType.LAZY, cascade = CascadeType.ALL, orphanRemoval = true)
+    private TransactionLog seat;
 
 }

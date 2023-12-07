@@ -20,15 +20,15 @@ public class TransactionLog extends BaseEntity {
     @Column(name = "num",nullable = false)
     private int num;
 
-    @ManyToOne(fetch = FetchType.LAZY)
+    @OneToOne(fetch = FetchType.LAZY)
     @JoinColumn(name = "client")
     private User client;
 
-    @ManyToOne(fetch = FetchType.LAZY)
+    @OneToOne(fetch = FetchType.LAZY)
     @JoinColumn(name = "airplane")
     private Airplane airplane;
 
-    @ManyToOne(fetch = FetchType.LAZY)
+    @OneToOne(fetch = FetchType.LAZY)
     @JoinColumn(name = "seat")
     private Seat seat;
 

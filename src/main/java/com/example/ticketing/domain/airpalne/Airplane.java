@@ -33,7 +33,7 @@ public class Airplane extends BaseEntity {
     @Column(name = "end_port", length = 50, nullable = false)
     private String endPort;
 
-    @OneToMany(mappedBy = "airplane", fetch = FetchType.LAZY, cascade = CascadeType.ALL, orphanRemoval = true)
-    private List<TransactionLog> transactionLogList = new ArrayList<>();
+    @OneToOne(mappedBy = "airplane", fetch = FetchType.LAZY, cascade = CascadeType.ALL, orphanRemoval = true)
+    private TransactionLog transactionLog;
 
 }
