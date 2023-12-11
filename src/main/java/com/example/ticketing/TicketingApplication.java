@@ -8,8 +8,7 @@ public class TicketingApplication {
 
     public static void main(String[] args) {
         SpringApplication.run(TicketingApplication.class, args);
-
-        System.out.println("깃 확인중");
+        System.out.println("프로그램 진행중");
     }
 
 }

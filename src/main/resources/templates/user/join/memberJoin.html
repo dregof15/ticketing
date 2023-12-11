@@ -7,7 +7,7 @@
   <th:block id="css"></th:block>
 
   <th:block id="script">
-<!--    <script type="text/javascript" th:src="@{/js/user/join/member.js}"></script>-->
+    <script type="text/javascript" th:src="@{/js/user/join/member.js}"></script>
   </th:block>
 </head>
 <body>
@@ -41,7 +41,7 @@
         </li>
       </ul>
       <div class="register-form">
-        <form id="form1">
+        <form id="form">
           <div class="form-tit">
             <h3>기본정보 입력</h3>
             <p class="essential-txt">표시는 필수 입력 사항입니다.</p>
@@ -51,7 +51,7 @@
               <p class="label essential"><span>아이디</span></p>
               <div class="id">
 <!--                <input type="text" th:field="*{mberId}" placeholder="아이디를 입력해 주세요" formatter='userId' maxlength="15">-->
-                <input type="text" placeholder="아이디를 입력해 주세요" formatter='userId' maxlength="15">
+                <input type="text" id="id" name="id" placeholder="아이디를 입력해 주세요" formatter='userId' maxlength="15">
                 <a class="btn lightgreen" href="javascript:void(0);" id="idCheck">중복확인</a>
               </div>
             </div>
@@ -59,27 +59,27 @@
               <p class="label essential"><span>비밀번호</span></p>
               <div>
 <!--                <input type="password" th:field="*{password}" placeholder="영문+숫자+특수문자(!@#$) 각 1자 이상 포함하여 9~12자 이내" maxlength="20">-->
-                <input type="password" placeholder="영문+숫자+특수문자(!@#$) 각 1자 이상 포함하여 9~12자 이내" maxlength="20">
+                <input type="password" id="pw" name="pw" placeholder="영문+숫자+특수문자(!@#$) 각 1자 이상 포함하여 9~12자 이내" maxlength="20">
               </div>
             </div>
             <div class="form-item">
               <p class="label essential"><span>비밀번호 확인</span></p>
               <div>
-                <input type="password" id="passwordCheck" placeholder="영문+숫자+특수문자(!@#$) 각 1자 이상 포함하여 9~12자 이내" maxlength="20">
+                <input type="password" id="pwCheck" placeholder="영문+숫자+특수문자(!@#$) 각 1자 이상 포함하여 9~12자 이내" maxlength="20">
               </div>
             </div>
             <div class="form-item">
               <p class="label essential"><span>가입자명</span></p>
               <div>
 <!--                <input type="text" th:field="*{mberNm}" placeholder="가입자명을 입력해 주세요" maxlength="10" formatter="replaceKo">-->
-                <input type="text" placeholder="가입자명을 입력해 주세요" maxlength="10" formatter="replaceKo">
+                <input type="text" id="name" name="name" placeholder="가입자명을 입력해 주세요" maxlength="10" formatter="replaceKo">
               </div>
             </div>
             <div class="form-item">
               <p class="label essential">휴대폰</p>
               <div>
 <!--                <input type="text" th:field="*{mbtlnum}" placeholder="전화번호" formatter="phoneNum">-->
-                <input type="text" placeholder="전화번호" formatter="phoneNum">
+                <input type="text" id="phone" name="phone" placeholder="전화번호" formatter="phoneNum">
                 <!--<a class="btn sky" href="javascript:void(0);">본인인증</a>-->
               </div>
             </div>
@@ -124,7 +124,7 @@
       </div>
       <div class="btn-area">
         <a class="btn gray" href="/join/member/1">이전</a>
-        <a class="btn green" onclick="pageObj.save2()">다음</a>
+        <a class="btn green" onclick="pageObj.save()">다음</a>
       </div>
     </div>
   </div>
