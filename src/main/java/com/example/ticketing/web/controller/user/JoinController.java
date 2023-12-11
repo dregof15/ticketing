@@ -15,4 +15,9 @@ public class JoinController {
     public String memberjoin () {
         return "user/join/memberJoin";
     }
+
+    @GetMapping("/complete")
+    public String complete () {
+        return "user/join/joinComplete";
+    }
 }
