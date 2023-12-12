@@ -922,3 +922,26 @@ input, select {
 .center-child {
   margin: auto;
 }
+
+/* Join-Complete */
+.join-complete {
+  padding: 50px 0;
+  text-align: center;
+  border-radius: 5px;
+  background: #f0fdee;
+}
+.join-complete img {
+  margin: 0 auto 25px;
+}
+.join-complete strong {
+  font-size: 24px;
+  font-weight: 700;
+}
+.join-complete p {
+  margin: 15px 0 50px;
+  font-size: 15px;
+  color: #6B6B6B;
+}
+.join-complete p span {
+  color: #5bd245;
+}
