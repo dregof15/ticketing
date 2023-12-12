@@ -804,6 +804,10 @@ footer li:not(:last-of-type) {
 
 
 /* join */
+.join {
+  background-color: #f0fdee;
+}
+
 .join-process {
   display: flex;
   justify-content: center;
@@ -859,13 +863,25 @@ footer li:not(:last-of-type) {
   font-weight: 500;
   color: #A2A2A2;
 }
+.id span {
+  display: block;
+  margin-bottom: 0.5rem;
+  font-size: 0.938rem;
+  color: gray;
+}
+.password span {
+  display: block;
+  margin-bottom: 0.5rem;
+  font-size: 0.938rem;
+  color: gray;
+}
 
 
 /* button */
 .btn {
   display: inline-block;
   min-width: 100px;
-  max-height: 48px;
+  max-height: 55px;
   padding: 16px 20px;
   text-align: center;
   font-size: 15px;
@@ -873,6 +889,7 @@ footer li:not(:last-of-type) {
   border-radius: 5px;
   cursor: pointer;
   transition: background 0.2s;
+  border: none;
 }
 .btn.lightgreen {
   border: 1px solid transparent;
@@ -921,4 +938,122 @@ input, select {
 
 .center-child {
   margin: auto;
+}
+
+
+/* Login */
+.logo-size {
+  width: 300px;
+  height: auto;
+}
+
+.wrap {
+  width: auto;
+  min-height: 80vh;
+}
+
+.login-area {
+  width: 600px;
+  margin-top: 50px;
+}
+
+.login-box {
+  padding: 50px 50px;
+  text-align: center;
+  border-radius: 0.8rem;
+  background: #fff;
+}
+.login-box h2 {
+  margin-bottom: 20px;
+  font-size: 25px;
+  font-weight: 700;
+}
+.login-box input {
+  display: block;
+}
+.login-box input:first-of-type {
+  margin-bottom: 25px;
+}
+.login-box .error_text {
+  margin: -3px 0 10px 2px;
+  font-size: 14px;
+  text-align: left;
+  color: #FF6565;
+}
+
+.login-btn, .find-btn {
+  width: 100%;
+  max-height: 54px;
+  padding: 18px 20px;
+}
+
+.login-btn {
+  margin: 20px 0 25px;
+}
+
+.login-link {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+.login-link a {
+  font-size: 15px;
+  color: #A2A2A2;
+}
+.login-link .find a:first-of-type {
+  position: relative;
+  margin-right: 20px;
+}
+.login-link .find a:first-of-type::after {
+  content: "";
+  position: absolute;
+  width: 1px;
+  height: 15px;
+  top: 1px;
+  right: -12px;
+  background: #E5E5E5;
+}
+
+
+/* Join-Complete */
+.join-complete {
+  padding: 50px 0;
+  text-align: center;
+  border-radius: 5px;
+  background: #f0fdee;
+}
+.join-complete img {
+  margin: 0 auto 25px;
+}
+.join-complete strong {
+  font-size: 24px;
+  font-weight: 700;
+}
+.join-complete p {
+  margin: 15px 0 50px;
+  font-size: 15px;
+  color: #6B6B6B;
+}
+.join-complete p span {
+  color: #5bd245;
+}
+
+.tit-area {
+  margin-bottom: 30px;
+}
+.tit-area p {
+  font-size: 0.938rem;
+  color: #777777;
+}
+.btn-login {
+  width: 100%;
+  height: 3.375rem;
+}
+
+.text-left {
+  text-align: left;
+}
+
+.margin-bottom {
+  margin-bottom: 25px;
 }

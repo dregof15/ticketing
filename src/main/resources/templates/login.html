@@ -7,32 +7,36 @@
     <th:block id="css">
     </th:block>
 
+<!--    <th:block id="script">-->
+<!--        <script>-->
+<!--            $(function() {-->
+<!--                $('.wrap > header, .wrap > footer').hide();-->
+<!--            });-->
+<!--        </script>-->
+<!--    </th:block>-->
+
     <th:block id="script">
-        <script>
-            $(function() {
-                $('.wrap > header, .wrap > footer').hide();
-            });
-        </script>
+        <script type="text/javascript" th:src="@{/js/user/join/member.js}"></script>
     </th:block>
 </head>
 <body id="section">
 <!--로그인-->
-<div class="contents join">
-    <div class="inner">
-        <div class="main-area">
-            <h1 class="top-logo"><img src="/images/common/olive-big.png" alt="올리브 항공"></h1>
+<div class="contents join center-parent">
+    <div class="wrap center-child">
+        <div class="login-area">
+            <h1 class="center-parent"><img class="center-child logo-size" src="/images/common/olive-big.png" alt="올리브 항공"></h1>
             <div class="content-item login-box">
                 <form th:action method="post">
                     <div class="tit-area">
-                        <h2 class="tit-area__tit">로그인</h2>
-                        <p class="tit-area__desc">아이디, 비밀번호를 입력해 주세요</p>
+                        <h2>로그인</h2>
+                        <p>아이디, 비밀번호를 입력해 주세요</p>
                     </div>
                     <div class="id">
-                        <span>아이디</span>
+                        <span class="text-left">아이디</span>
                         <input type="text" id="username" name="username" placeholder="아이디">
                     </div>
                     <div class="password">
-                        <span>비밀번호</span>
+                        <span class="text-left">비밀번호</span>
                         <input type="password" name="password" placeholder="비밀번호">
                     </div>
 <!--                    <div class="error_text"-->
@@ -40,18 +44,19 @@
 <!--                         th:with="errorMsg=${session['SPRING_SECURITY_LAST_EXCEPTION'].message}">-->
 <!--                        <span th:text="${errorMsg}">Wrong input!</span>-->
 <!--                    </div>-->
-                    <button type="submit" class="btn blue btn-login">로그인</button>
+                    <button type="submit" class="btn green btn-login margin-bottom">로그인</button>
+                    <button type="button" class="btn gray btn-login">회원가입</button>
                 </form>
-                <div class="bottom">
-                    <label class="chk-item">
-                        <input type="checkbox" id="idSaveCheck">
-                        <span>아이디 저장</span>
-                    </label>
-                    <div class="find">
+<!--                <div class="bottom">-->
+<!--                    <label class="chk-item">-->
+<!--                        <input type="checkbox" id="idSaveCheck">-->
+<!--                        <span>아이디 저장</span>-->
+<!--                    </label>-->
+<!--                    <div class="find">-->
 <!--                        <button onclick="pageObj.view.findIdModal()">아이디</button>-->
 <!--                        <button onclick="pageObj.view.findPwdModal()">비밀번호 찾기</button>-->
-                    </div>
-                </div>
+<!--                    </div>-->
+<!--                </div>-->
             </div>
         </div>
     </div>
