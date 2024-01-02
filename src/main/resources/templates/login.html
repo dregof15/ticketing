@@ -4,19 +4,10 @@
 <head>
     <meta charset="UTF-8">
 
-    <th:block id="css">
-    </th:block>
-
-<!--    <th:block id="script">-->
-<!--        <script>-->
-<!--            $(function() {-->
-<!--                $('.wrap > header, .wrap > footer').hide();-->
-<!--            });-->
-<!--        </script>-->
-<!--    </th:block>-->
+    <th:block id="css"></th:block>
 
     <th:block id="script">
-        <script type="text/javascript" th:src="@{/js/user/join/member.js}"></script>
+        <script type="application/javascript" th:src="@{/js/user/join/login.js}"></script>
     </th:block>
 </head>
 <body id="section">
@@ -45,7 +36,7 @@
 <!--                        <span th:text="${errorMsg}">Wrong input!</span>-->
 <!--                    </div>-->
                     <button type="submit" class="btn green btn-login margin-bottom">로그인</button>
-                    <button type="button" class="btn gray btn-login">회원가입</button>
+                    <button type="button" class="btn gray btn-login" onclick="PageObj.view.signup()">회원가입</button>
                 </form>
 <!--                <div class="bottom">-->
 <!--                    <label class="chk-item">-->

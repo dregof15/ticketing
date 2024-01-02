@@ -16,21 +16,20 @@ let pageObj = {
             let smsFlag = true;
             if (`smsFlag`) {
                 $ajax.post({
-                    url: '/join/idCheck',
-                    data: {mberId : form.id},
+                    url: '/join/member',
+                    data: form,
                     success: function (res) {
                         if (res == 'N') {
                             idCheckFlag = 'Y';
 
-                            $ajax.post({
+                            $ajax.get({
                                 data: form,
                                 success: function (user) {
                                     location.href = '/join/complete'
                                 }
                             })
                         } else {
-                            alert("이미 사용 중인 아이디입니다.");
-                            $("#id").focus();
+                            alert("회원가입에 실패 하였습니다.");
                             idCheckFlag = 'N';
                         }
                     }
@@ -195,6 +194,8 @@ function eventInit() {
 function idCheck() {
     let id = $("#id").val();
     let regExp = /^[a-z]+[a-z0-9]{1,19}$/g;
+
+    console.log("아이디 체크 중")
 
     if (id === null) {
         alert("아이디를 입력해주세요.");

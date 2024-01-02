@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html th:replace="~{layout/base :: layout(~{::#css}, ~{::#script}, ~{::section})}"
+<html th:replace="~{layout/base :: layout(~{::#css}, ~{::#script}, ~{::#section})}"
       xmlns:th="http://www.thymeleaf.org">
 <head>
   <meta charset="UTF-8">
@@ -7,10 +7,10 @@
   <th:block id="css"></th:block>
 
   <th:block id="script">
-    <script type="text/javascript" th:src="@{/js/user/join/member.js}"></script>
+    <script type="application/javascript" th:src="@{/js/user/join/member.js}"></script>
   </th:block>
 </head>
-<body>
+<body id="section">
 
 <section>
 <!--  <div class="inner register-wrap" th:object="${data}">-->

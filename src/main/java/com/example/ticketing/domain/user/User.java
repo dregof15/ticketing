@@ -48,6 +48,12 @@ public class User extends BaseEntity {
     @Column(name = "vip_dp", length = 50)
     private String vipDp;
 
+    @Column(name = "used_yn", length = 50)
+    private String usedYn;
+
+    @Column(name = "del_yn", length = 50)
+    private String delYn;
+
     @OneToOne(mappedBy = "client", fetch = FetchType.LAZY, cascade = CascadeType.ALL, orphanRemoval = true)
     private TransactionLog transactionLog;
 
