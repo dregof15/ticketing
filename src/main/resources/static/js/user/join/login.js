@@ -5,7 +5,3 @@ var PageObj = {
         }
     }
 }
-
-$(document).ready(function () {
-    console.log("chk")
-})

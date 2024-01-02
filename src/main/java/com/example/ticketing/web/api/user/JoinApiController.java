@@ -27,8 +27,7 @@ public class JoinApiController {
 
     @PostMapping("/member")
     public ResponseEntity saveMember(@RequestBody JoinUserDto joinUserDto) throws IOException {
-
-        userService.saveMember(joinUserDto);
-        return ResponseEntity.ok().build();
+        User user = userService.saveMember(joinUserDto);
+        return ResponseEntity.ok(user);
     }
 }

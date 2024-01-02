@@ -18,8 +18,8 @@ let pageObj = {
                 $ajax.post({
                     url: '/join/member',
                     data: form,
-                    success: function (res) {
-                        if (res == 'N') {
+                    success: function (user) {
+                        if (user) {
                             idCheckFlag = 'Y';
 
                             $ajax.get({
@@ -194,8 +194,6 @@ function eventInit() {
 function idCheck() {
     let id = $("#id").val();
     let regExp = /^[a-z]+[a-z0-9]{1,19}$/g;
-
-    console.log("아이디 체크 중")
 
     if (id === null) {
         alert("아이디를 입력해주세요.");
