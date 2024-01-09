@@ -15,7 +15,9 @@ public class JoinUserDto {
 
     private String phone;
 
-    private String email;
+    private String idEmail;
+
+    private String domainEmail;
 
     private String zip;
 

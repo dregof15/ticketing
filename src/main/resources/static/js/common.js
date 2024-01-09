@@ -52,9 +52,9 @@ $errors = {
 }
 
 $api = {
-    addressApi: function (zipCodeId = 'zip', addressId = 'adres',
-                          detailId = 'adresDetail', sido = 'ctprvn',
-                          sigungu = 'signgu') {
+    addressApi: function (zipCodeId = 'zip', addressId = 'adress',
+                          detailId = 'adressDetail', sido = 'sido',
+                          sigungu = 'sigungu') {
         new daum.Postcode({
             oncomplete: function (data) { //선택시 입력값 세팅
                 document.getElementById(zipCodeId).value = data.zonecode; // 주소 넣기

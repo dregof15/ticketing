@@ -3,7 +3,6 @@ package com.example.ticketing.service.user;
 import com.example.ticketing.domain.user.User;
 import com.example.ticketing.repository.user.UserRepository;
 import com.example.ticketing.web.dto.user.JoinUserDto;
-import jakarta.persistence.EntityExistsException;
 import lombok.RequiredArgsConstructor;
 import org.springframework.security.crypto.bcrypt.BCryptPasswordEncoder;
 import org.springframework.security.crypto.password.PasswordEncoder;
@@ -25,6 +24,13 @@ public class UserService {
             return "Y";
         }
         return "N";
+    }
+
+    public JoinUserDto loginUserInfo() {
+        JoinUserDto joinUserDto = new JoinUserDto(); // 정보를 담을 그릇
+
+//        joinUserDto
+        return joinUserDto;
     }
 
     @Transactional

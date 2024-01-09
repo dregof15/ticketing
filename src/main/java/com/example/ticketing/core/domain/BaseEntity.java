@@ -1,9 +1,9 @@
 package com.example.ticketing.core.domain;
 
-import jakarta.persistence.Column;
-import jakarta.persistence.EntityListeners;
-import jakarta.persistence.MappedSuperclass;
+import jakarta.persistence.*;
+import lombok.AccessLevel;
 import lombok.Getter;
+import lombok.NoArgsConstructor;
 import org.springframework.data.annotation.CreatedBy;
 import org.springframework.data.annotation.CreatedDate;
 import org.springframework.data.annotation.LastModifiedBy;
@@ -14,6 +14,8 @@ import java.time.LocalDateTime;
 
 @Getter
 @MappedSuperclass
+@NoArgsConstructor(access = AccessLevel.PROTECTED)
+@Inheritance(strategy = InheritanceType.JOINED)
 @EntityListeners(AuditingEntityListener.class) /* 생성 수정 삭제시 실행되며 그 당시 생성 수정 일자를 자동으로 설정하는 역할을 함. */
 public class BaseEntity {
 
@@ -32,5 +34,10 @@ public class BaseEntity {
     @LastModifiedDate
     @Column(name = "updt_dt")
     private LocalDateTime updtDt;
-
+    public BaseEntity (String id) {
+        this.registId = id;
+        this.registDt = LocalDateTime.now();
+        this.updtId = id;
+        this.updtDt = LocalDateTime.now();
+    }
 }
