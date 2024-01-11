@@ -51,7 +51,7 @@ public class SecurityConfig {
 
         MvcRequestMatcher.Builder mvc = new MvcRequestMatcher.Builder(introspector);
         return http.authorizeHttpRequests(authz -> authz
-                        .requestMatchers(mvc.pattern("/"),mvc.pattern("/login"),mvc.pattern("/"), mvc.pattern("/join/**"), mvc.pattern("/css/**"), mvc.pattern("/images/**"), mvc.pattern("/js/user/join/**"), mvc.pattern("/js/common.js")).permitAll()
+                        .requestMatchers(mvc.pattern("/"),mvc.pattern("/login"), mvc.pattern("/join/**"), mvc.pattern("/css/**"), mvc.pattern("/images/**"), mvc.pattern("/js/user/join/**"), mvc.pattern("/js/common.js"),mvc.pattern("/favicon.ico"),mvc.pattern("/error")).permitAll()
                         .anyRequest().authenticated()
                 ).formLogin((formLogin) ->
                         formLogin.loginPage("/login")

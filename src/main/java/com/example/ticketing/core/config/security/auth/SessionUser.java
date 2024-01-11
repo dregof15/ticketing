@@ -77,8 +77,12 @@ public class SessionUser implements UserDetails {
 //    로그인 유저 정보 조회 용
     public static SessionUser getLoginUser() {
         Object principal = SecurityContextHolder.getContext().getAuthentication().getPrincipal();
-        UserDetails userDetails = (UserDetails)principal;
 
-        return (SessionUser) userDetails;
+        if (principal != "anonymousUser") {
+            UserDetails userDetails = (UserDetails)principal;
+            return (SessionUser) userDetails;
+        } else {
+            return null;
+        }
     }
 }

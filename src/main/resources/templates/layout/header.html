@@ -2,23 +2,24 @@
 <html xmlns:th="http://www.thymeleaf.org">
 
 <header th:fragment="header">
-    <div class="inner">
-        <h1 class="logo">
-            <a class="logo-img"></a>
-        </h1>
-        <nav class="pc">
-            <ul>
-                <li><a href="/login">로그인</a></li>
-                <li><a href="/join/member">회원가입</a></li>
-                <li><a href="/">항공권 예매</a></li>
-                <li><a href="/">마이페이지</a></li>
-            </ul>
-        </nav>
-    </div>
+    <th:block th:with="authentication=${#authentication.getName()}, principal=${#authentication.principal}">
+        <div class="inner" th:object="${userInfo}">
+            <h1 class="logo">
+                <a class="logo-img"></a>
+            </h1>
+            <nav class="pc">
+                <ul>
+                    <li th:if="${authentication} == 'anonymousUser'"><a href="/login">로그인</a></li>
+                    <li th:if="${authentication} != 'anonymousUser'"><a th:text="${#authentication.principal.userNm}"></a></li>
+                    <li th:if="${authentication} == 'anonymousUser'"><a href="/join/member">회원가입</a></li>
+                    <li th:if="${authentication} != 'anonymousUser'"><a href="/logout">로그아웃</a></li>
+                    <li><a href="/">항공권 예매</a></li>
+                    <li th:if="${authentication} != 'anonymousUser'"><a href="/">마이페이지</a></li>
+                </ul>
+            </nav>
+        </div>
+    </th:block>
 </header>
-
-
 <body>
-
 </body>
 </html>
