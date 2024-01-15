@@ -29,7 +29,7 @@ public class SessionUser implements UserDetails {
         this.userId = user.getId();
         this.password = user.getPw();
         this.userNm = user.getName();
-//        this.role =
+        this.role = user.getRole();
     }
 
 //    member 계정의 권한을 담아두기 위한 부분

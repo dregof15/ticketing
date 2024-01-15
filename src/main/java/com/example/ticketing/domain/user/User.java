@@ -55,6 +55,9 @@ public class User extends BaseEntity {
     @Column(name = "del_yn", length = 1)
     private String delYn;
 
+    @Column(name = "role", length = 50)
+    private String role;
+
     @OneToOne(mappedBy = "client", fetch = FetchType.LAZY, cascade = CascadeType.ALL, orphanRemoval = true)
     private TransactionLog transactionLog;
 
@@ -77,6 +80,7 @@ public class User extends BaseEntity {
         user.delYn = "N";
         user.usedYn = "Y";
         user.vipDp = "0";
+        user.role = "auth00002";
         return user;
     }
 }

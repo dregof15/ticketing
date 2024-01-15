@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org"
+      th:replace="~{layout/base :: layout(~{::#css}, ~{::#script}, ~{::#section})}">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+
+    <th:block id="script">
+        <script type="application/javascript" th:src="@{/js/admin/course.js}"></script>
+    </th:block>
+</head>
+<body id="section">
+<section>
+    <div class="wrapper">
+        <div class="inner">
+            <div class="tit-wrap">
+                <h2>코스 등록</h2>
+            </div>
+            <div class="content">
+                <form>
+                    <div class="input-area">
+                        <div class="input-list">
+                            <div class="label"><span>코스명</span></div>
+                            <div class="input-box">
+                                <input th:id="courseNm" th:name="courseNm" placeholder="코스명을 입력해 주세요">
+                            </div>
+                        </div>
+                        <div class="input-list">
+                            <div class="label essential"><span>출발지</span></div>
+                            <div class="input-box">
+                                <select th:id="start" th:name="start">
+                                    <option value="">선택</option>
+                                    <!--                                    <th:block th:each="chargerlist : *{chargerLists}">-->
+                                    <!--                                        <option th:value="${chargerlist.chargerId}" th:text="${chargerlist.chargerNm}" th:selected="${chargerlist.chargerId} == *{chargerId}"></option>-->
+                                    <!--                                    </th:block>-->
+                                </select>
+                            </div>
+                        </div>
+                        <div class="input-list">
+                            <div class="label essential"><span>도착지</span></div>
+                            <div class="input-box">
+                                <select th:id="end" th:name="end">
+                                    <option value="">선택</option>
+                                    <!--                                    <th:block th:each="chargerlist : *{chargerLists}">-->
+                                    <!--                                        <option th:value="${chargerlist.chargerId}" th:text="${chargerlist.chargerNm}" th:selected="${chargerlist.chargerId} == *{chargerId}"></option>-->
+                                    <!--                                    </th:block>-->
+                                </select>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="btn-area">
+                        <th:block>
+                            <a class="btn gray" href="javascript:void(0);" onclick="pageObj.close()">목록</a>
+                            <a class="btn green" href="javascript:void(0);" onclick="pageObj.save()">저장</a>
+                        </th:block>
+                    </div>
+
+                </form>
+            </div>
+        </div>
+    </div>
+</section>
+</body>
+</html>

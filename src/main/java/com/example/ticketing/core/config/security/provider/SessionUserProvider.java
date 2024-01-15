@@ -3,6 +3,8 @@ package com.example.ticketing.core.config.security.provider;
 import com.example.ticketing.core.config.security.auth.SessionUser;
 import com.example.ticketing.core.config.security.auth.SessionUserService;
 import com.example.ticketing.domain.user.User;
+import lombok.NoArgsConstructor;
+import lombok.RequiredArgsConstructor;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.security.authentication.AuthenticationProvider;
 import org.springframework.security.authentication.BadCredentialsException;
@@ -14,10 +16,11 @@ import org.springframework.security.crypto.password.PasswordEncoder;
 import org.springframework.stereotype.Component;
 
 @Component
+@RequiredArgsConstructor
 public class SessionUserProvider implements AuthenticationProvider {
 
-    @Autowired
-    private SessionUserService sessionUserService;
+
+    private final SessionUserService sessionUserService;
 
     @Override
     public Authentication authenticate(Authentication authentication) throws AuthenticationException {

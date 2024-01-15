@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org"
+      th:replace="~{layout/base :: layout(~{::#css}, ~{::#script}, ~{::#section})}">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+
+    <th:block id="script">
+        <script type="application/javascript" th:src="@{/js/admin/course.js}"></script>
+    </th:block>
+</head>
+<body id="section">
+<section>
+    <div class="wrapper">
+        <div class="inner">
+            <div class="tit-wrap">
+                <h2>코스 등록</h2>
+            </div>
+            <div class="content">
+                <form>
+                    <!-- 조건검색 -->
+                    <!--                    <th:block th:if="${useSe} == 'USESE00002'"><div th:replace="utils/searchBar :: search1"></div></th:block>-->
+
+                    <div class="table-container type1 cursor">
+                        <div class="total">
+                            <!--                            <p>총 <span class="blue" th:text="${count.alc}">171</span> 건</p>-->
+                            <p>총 <span class="blue">2</span> 건</p>
+                        </div>
+                        <table>
+                            <colgroup>
+                                <col width="5%">
+                                <col width="5%">
+                                <col width="*">
+                                <col width="20%">
+                                <col width="20%">
+                                <col width="20%">
+                            </colgroup>
+                            <thead>
+                            <tr>
+                                <th></th>
+                                <th>No</th>
+                                <th>코스 명</th>
+                                <th>출발 공항</th>
+                                <th>도착 공항</th>
+                                <th>이용 중인 비행기 현황</th>
+                            </tr>
+                            </thead>
+                            <tbody>
+                            <tr>
+                                <td class="order1" id="chkId">
+                                    <label class="chk-item">
+                                        <input type="checkbox" title="체크">
+                                        <!--                                        <input type="checkbox" title="체크" th:id="boardId" th:value="${board.boardId}" th:name="boardId">-->
+                                    </label>
+                                </td>
+                                <td data-before="No." class="txt-hidden num">1</td>
+                                <td data-before="접수번호" class="txt-hidden">2</td>
+                                <td data-before="기관(학교)명" class="txt-hidden">3</td>
+                                <td data-before="분류" class="txt-hidden dashed-hidden">4</td>
+                                <td class="main-txt tit"><span>5</span></td>
+                            </tr>
+
+                            <!--                            <tr th:if="${result.content.size() < 1}" class="empty">-->
+                            <!--                                <td colspan="10">-->
+                            <!--                                    <img src="/images/common/alert_ico.svg" alt="">-->
+                            <!--                                    <p>등록된 데이터가 없습니다.</p>-->
+                            <!--                                </td>-->
+                            <!--                            </tr>-->
+
+
+                            </tbody>
+                        </table>
+                    </div>
+
+                    <!-- 페이징 -->
+                    <!--                    <div th:replace="utils/pagination :: pagination(${result})"></div>-->
+                    <div class="btn-area">
+                        <th:block>
+                            <a class="btn red" href="javascript:void(0);" onclick="pageObj.delete()">삭제</a>
+                            <a class="btn green" href="javascript:void(0);" onclick="pageObj.addPage()">등록</a>
+                        </th:block>
+                    </div>
+
+                </form>
+            </div>
+        </div>
+    </div>
+</section>
+</body>
+</html>
